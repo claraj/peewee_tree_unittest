@@ -4,8 +4,8 @@ from db_config import database_path
 db = SqliteDatabase(database_path)
 
 class Tree(Model):    
-    name = CharField(unique=True) #, constraints=[Check('length(name) > 1')] )
-    max_height = DecimalField() # constraints=[Check('max_height >= 0 and max_height <= 500' ) ])
+    name = CharField(unique=True)
+    max_height = DecimalField() 
 
     class Meta:
         database = db
